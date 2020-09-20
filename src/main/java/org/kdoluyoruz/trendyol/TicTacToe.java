@@ -7,9 +7,9 @@ public class TicTacToe {
     final String USER_1 = "X";
     final String USER_2 = "O";
     final String EMPTY = "";
-    List<List<String>> table = new ArrayList<>();
     final int ROW_LIMIT = 3;
     final int COLUMN_LIMIT = 3;
+    List<List<String>> table = new ArrayList<>();
 
     public void createTable() {
 
@@ -39,8 +39,15 @@ public class TicTacToe {
 
     public boolean playUser1(int row, int column) {
 
-        if(table.get(row).get(column).equals(EMPTY)){
-            table.get(row).set(column,USER_1);
+        if (row > ROW_LIMIT)
+            throw new IllegalArgumentException("Row can not bigger than 2");
+
+        if (row < 0)
+            throw new IllegalArgumentException("Row can not lower than 0");
+
+
+        if (table.get(row).get(column).equals(EMPTY)) {
+            table.get(row).set(column, USER_1);
             return true;
         }
 

@@ -6,7 +6,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TicTacToeTest {
@@ -42,7 +41,7 @@ public class TicTacToeTest {
 
         //Act
         sut.createTable();
-        boolean result = sut.playUser1(row,column);
+        boolean result = sut.playUser1(row, column);
 
         //Assert
         assertTrue(result);
@@ -56,10 +55,52 @@ public class TicTacToeTest {
 
         //Act
         sut.createTable();
-        Throwable throwable = Java6Assertions.catchThrowable(() -> sut.playUser1(row,column));
+        Throwable throwable = Java6Assertions.catchThrowable(() -> sut.playUser1(row, column));
 
         //Assert
-        assertThat(throwable).isInstanceOf(IllegalArgumentException.class).hasMessage("Row can not bigger than 3");
+        assertThat(throwable).isInstanceOf(IllegalArgumentException.class).hasMessage("Row can not bigger than 2");
+    }
+
+    @Test
+    public void playUser1_WhenRowLimitIsLowerThan0_ShouldThrowIllegalArgumentException() {
+        //Arrange
+        int row = -1;
+        int column = 1;
+
+        //Act
+        sut.createTable();
+        Throwable throwable = Java6Assertions.catchThrowable(() -> sut.playUser1(row, column));
+
+        //Assert
+        assertThat(throwable).isInstanceOf(IllegalArgumentException.class).hasMessage("Row can not lower than 0");
+    }
+
+    @Test
+    public void playUser1_WhenColumnLimitIsExceeded_ShouldThrowIllegalArgumentException() {
+        //Arrange
+        int row = 0;
+        int column = 5;
+
+        //Act
+        sut.createTable();
+        Throwable throwable = Java6Assertions.catchThrowable(() -> sut.playUser1(row, column));
+
+        //Assert
+        assertThat(throwable).isInstanceOf(IllegalArgumentException.class).hasMessage("Column can not bigger than 2");
+    }
+
+    @Test
+    public void playUser1_WhenColumnLimitIsLowerThan0_ShouldThrowIllegalArgumentException() {
+        //Arrange
+        int row = 1;
+        int column = -5;
+
+        //Act
+        sut.createTable();
+        Throwable throwable = Java6Assertions.catchThrowable(() -> sut.playUser1(row, column));
+
+        //Assert
+        assertThat(throwable).isInstanceOf(IllegalArgumentException.class).hasMessage("Column can not lower than 0");
     }
 
 }
