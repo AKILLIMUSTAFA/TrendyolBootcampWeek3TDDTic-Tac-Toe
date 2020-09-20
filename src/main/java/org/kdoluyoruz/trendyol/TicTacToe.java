@@ -45,12 +45,18 @@ public class TicTacToe {
         if (row < 0)
             throw new IllegalArgumentException("Row can not lower than 0");
 
+        if (column > COLUMN_LIMIT)
+            throw new IllegalArgumentException("Column can not bigger than 2");
+
+        if (column < 0)
+            throw new IllegalArgumentException("Column can not lower than 0");
+
 
         if (table.get(row).get(column).equals(EMPTY)) {
             table.get(row).set(column, USER_1);
             return true;
         }
 
-        return false;
+        throw new IllegalStateException("Cell is not empty!!");
     }
 }

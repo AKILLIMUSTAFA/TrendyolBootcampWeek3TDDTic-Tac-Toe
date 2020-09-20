@@ -103,4 +103,36 @@ public class TicTacToeTest {
         assertThat(throwable).isInstanceOf(IllegalArgumentException.class).hasMessage("Column can not lower than 0");
     }
 
+    @Test
+    public void playUser1_WhenCellIsNotEmpty_ShouldThrowIllegalStateException() {
+        //Arrange
+        int row = 0;
+        int column = 0;
+
+        //Act
+        sut.createTable();
+        sut.playUser1(row, column);
+        Throwable throwable = Java6Assertions.catchThrowable(() -> sut.playUser1(row, column));
+
+        //Assert
+        assertThat(throwable).isInstanceOf(IllegalStateException.class).hasMessage("Cell is not empty!!");
+    }
+
+    @Test
+    public void playUser1_WhenNotUser1Turn_ShouldThrowIllegalStateException() {
+        //Arrange
+        int move1_row = 0;
+        int move1_column = 0;
+        int move2_row = 1;
+        int move2_column = 0;
+
+        //Act
+        sut.createTable();
+        sut.playUser1(move1_row, move1_column);
+        Throwable throwable = Java6Assertions.catchThrowable(() -> sut.playUser1(move2_row, move2_column));
+
+        //Assert
+        assertThat(throwable).isInstanceOf(IllegalStateException.class).hasMessage("Not User 1's turn!!");
+    }
+
 }

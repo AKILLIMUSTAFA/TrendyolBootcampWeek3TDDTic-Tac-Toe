@@ -73,7 +73,7 @@
       <recent name="C:\Users\CEVIK\IdeaProjects\TrendyolBootcamp\TrendyolBootcampWeek3TDDTic-Tac-Toe\src\main\java\org\kdoluyoruz\trendyol" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TicTacToeTest">
+  <component name="RunManager" selected="JUnit.TicTacToeTest.playUser1_WhenCellIsNotEmpty_ShouldThrowIllegalStateException">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -86,7 +86,7 @@
       </method>
     </configuration>
     <configuration name="TicTacToeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TrendyolBootcampWeek3TDDTic-Tac-Toe" />
+      <module name="TrendyolBootcampW3TDDTicTacToe" />
       <useClassPathOnly />
       <extension name="coverage">
         <pattern>
@@ -99,22 +99,6 @@
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="PARAMETERS" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TicTacToeTest.createTable_WhenGameStart_ShouldReturnEmptyTable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TrendyolBootcampWeek3TDDTic-Tac-Toe" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.kdoluyoruz.trendyol.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.kdoluyoruz.trendyol" />
-      <option name="MAIN_CLASS_NAME" value="org.kdoluyoruz.trendyol.TicTacToeTest" />
-      <option name="METHOD_NAME" value="createTable_WhenGameStart_ShouldReturnEmptyTable" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -133,6 +117,22 @@
       <option name="METHOD_NAME" value="playUser1_WhenCellIsEmpty_ShouldReturnTrue" />
       <option name="TEST_OBJECT" value="method" />
       <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicTacToeTest.playUser1_WhenCellIsNotEmpty_ShouldThrowIllegalStateException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TrendyolBootcampW3TDDTicTacToe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.kdoluyoruz.trendyol.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.kdoluyoruz.trendyol" />
+      <option name="MAIN_CLASS_NAME" value="org.kdoluyoruz.trendyol.TicTacToeTest" />
+      <option name="METHOD_NAME" value="playUser1_WhenCellIsNotEmpty_ShouldThrowIllegalStateException" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -171,11 +171,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TicTacToeTest.playUser1_WhenCellIsNotEmpty_ShouldThrowIllegalStateException" />
         <item itemvalue="JUnit.TicTacToeTest" />
         <item itemvalue="JUnit.TicTacToeTest.playUser1_WhenRowLimitIsLowerThan0_ShouldThrowIllegalArgumentException" />
         <item itemvalue="JUnit.TicTacToeTest.playUser1_WhenRowLimitIsExceeded_ShouldThrowIllegalArgumentException" />
         <item itemvalue="JUnit.TicTacToeTest.playUser1_WhenCellIsEmpty_ShouldReturnTrue" />
-        <item itemvalue="JUnit.TicTacToeTest.createTable_WhenGameStart_ShouldReturnEmptyTable" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +192,7 @@
       <workItem from="1600605715094" duration="382000" />
       <workItem from="1600606113253" duration="357000" />
       <workItem from="1600606725877" duration="16000" />
-      <workItem from="1600606750197" duration="707000" />
+      <workItem from="1600606750197" duration="1664000" />
     </task>
     <servers />
   </component>
@@ -220,26 +220,26 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1085" y="400" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1600604078551" />
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1600608153134">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="2517" height="551" key="GridCell.Tab.0.bottom" timestamp="1600608493526">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1600608153134" />
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1600607237388" />
-    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1600608153133">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="2517" height="551" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1600608493526" />
+    <state width="2517" height="551" key="GridCell.Tab.0.center" timestamp="1600608493526">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1600608153133" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1600607237388" />
-    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1600608153132">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="2517" height="551" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1600608493526" />
+    <state width="2517" height="551" key="GridCell.Tab.0.left" timestamp="1600608493526">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1600608153132" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1600607237388" />
-    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1600608153134">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="2517" height="551" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1600608493526" />
+    <state width="2517" height="551" key="GridCell.Tab.0.right" timestamp="1600608493526">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1600608153134" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1600607237388" />
+    <state width="2517" height="551" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1600608493526" />
     <state width="2517" height="492" key="GridCell.Tab.1.bottom" timestamp="1600607233248">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
