@@ -16,7 +16,6 @@ public class TicTacToe {
     String userTurn;
     String winnerUserSymbol;
 
-
     public void createTable() {
 
         userTurn = USER_1;
@@ -43,7 +42,7 @@ public class TicTacToe {
 
     public boolean playUser1(int row, int column) {
 
-        if(isGameOver())
+        if (isGameOver())
             throw new IllegalStateException("Game Over!!");
 
         if (!isUser1Turn())
@@ -54,7 +53,7 @@ public class TicTacToe {
 
     public boolean playUser2(int row, int column) {
 
-        if(isGameOver())
+        if (isGameOver())
             throw new IllegalStateException("Game Over!!");
 
         if (isUser1Turn())
@@ -99,27 +98,21 @@ public class TicTacToe {
 
     public boolean isGameOver() {
 
-        if (winnerUserSymbol.equals(EMPTY)){
+        if (winnerUserSymbol.equals(EMPTY)) {
 
-            if(isAllCellFull())
-                return true;
-
-            return false;
+            return isAllCellFull();
         }
-
-
         return true;
     }
 
     private boolean isAllCellFull() {
         for (int i = 0; i < ROW_LIMIT; i++) {
             for (int j = 0; j < COLUMN_LIMIT; j++) {
-                if(table.get(i).get(j).equals(EMPTY)){
+                if (table.get(i).get(j).equals(EMPTY)) {
                     return false;
                 }
             }
         }
-
         return true;
     }
 
@@ -143,7 +136,6 @@ public class TicTacToe {
         if (!currentCrossWinnerSymbol.equals(EMPTY)) {
             System.out.println("currentCrossWinnerSymbol");
             winnerUserSymbol = currentCrossWinnerSymbol;
-            return;
         }
     }
 
@@ -154,7 +146,7 @@ public class TicTacToe {
 
             for (int j = 0; j < COLUMN_LIMIT - 1; j++) {
                 if (!table.get(i).get(j).equals(table.get(i).get(j + 1))) {
-                    if(table.get(i).get(0) != EMPTY){
+                    if (table.get(i).get(0).equals(EMPTY)) {
                         isAllRowSame = false;
                         break;
                     }
@@ -175,7 +167,7 @@ public class TicTacToe {
 
             for (int j = 0; j < ROW_LIMIT - 1; j++) {
                 if (!table.get(j).get(i).equals(table.get(j + 1).get(i))) {
-                    if(table.get(0).get(i) != EMPTY){
+                    if (table.get(0).get(i).equals(EMPTY)) {
                         isAllColumnSame = false;
                         break;
                     }
@@ -193,7 +185,7 @@ public class TicTacToe {
         if ((table.get(0).get(0).equals(table.get(1).get(1)) && table.get(0).get(0).equals(table.get(2).get(2))) ||
                 (table.get(0).get(2).equals(table.get(1).get(1)) && table.get(0).get(2).equals(table.get(2).get(0)))) {
 
-            if(table.get(1).get(1) != EMPTY){
+            if (table.get(1).get(1).equals(EMPTY)) {
                 return table.get(1).get(1);
             }
         }
@@ -202,15 +194,18 @@ public class TicTacToe {
     }
 
     public String getWinnerName() {
-        if(winnerUserSymbol.equals(USER_1))
+        if (!isGameOver())
+            throw new IllegalStateException("Game Does Not Over Yet!!");
+
+        if (winnerUserSymbol.equals(USER_1))
             return USER_1_NAME;
-        if(winnerUserSymbol.equals(USER_2))
+        if (winnerUserSymbol.equals(USER_2))
             return USER_2_NAME;
 
         return DRAW;
     }
 
-    public void restartGame(){
+    public void restartGame() {
         createTable();
     }
 }
