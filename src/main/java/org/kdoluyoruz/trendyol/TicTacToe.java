@@ -7,11 +7,15 @@ public class TicTacToe {
     final String USER_1 = "X";
     final String USER_2 = "O";
     final String EMPTY = "";
+    final String USER_1_NAME = "User1";
+    final String USER_2_NAME = "User2";
+    final String DRAW = "No Winner";
     final int ROW_LIMIT = 3;
     final int COLUMN_LIMIT = 3;
     List<List<String>> table = new ArrayList<>();
     String userTurn;
     String winnerUserSymbol;
+
 
     public void createTable() {
 
@@ -39,6 +43,9 @@ public class TicTacToe {
 
     public boolean playUser1(int row, int column) {
 
+        if(isGameOver())
+            throw new IllegalStateException("Game Over!!");
+
         if (!isUser1Turn())
             throw new IllegalStateException("Not User 1's turn!!");
 
@@ -46,6 +53,9 @@ public class TicTacToe {
     }
 
     public boolean playUser2(int row, int column) {
+
+        if(isGameOver())
+            throw new IllegalStateException("Game Over!!");
 
         if (isUser1Turn())
             throw new IllegalStateException("Not User 2's turn!!");
@@ -89,8 +99,26 @@ public class TicTacToe {
 
     public boolean isGameOver() {
 
-        if (winnerUserSymbol.equals(EMPTY))
+        if (winnerUserSymbol.equals(EMPTY)){
+
+            if(isAllCellFull())
+                return true;
+
             return false;
+        }
+
+
+        return true;
+    }
+
+    private boolean isAllCellFull() {
+        for (int i = 0; i < ROW_LIMIT; i++) {
+            for (int j = 0; j < COLUMN_LIMIT; j++) {
+                if(table.get(i).get(j).equals(EMPTY)){
+                    return false;
+                }
+            }
+        }
 
         return true;
     }
@@ -99,18 +127,21 @@ public class TicTacToe {
 
         String currentRowWinnerSymbol = getRowWinnerSymbol();
         if (!currentRowWinnerSymbol.equals(EMPTY)) {
+            System.out.println("currentRowWinnerSymbol");
             winnerUserSymbol = currentRowWinnerSymbol;
             return;
         }
 
         String currentColumnWinnerSymbol = getColumnWinnerSymbol();
         if (!currentColumnWinnerSymbol.equals(EMPTY)) {
+            System.out.println("currentColumnWinnerSymbol");
             winnerUserSymbol = currentColumnWinnerSymbol;
             return;
         }
 
         String currentCrossWinnerSymbol = getCrossWinnerSymbol();
         if (!currentCrossWinnerSymbol.equals(EMPTY)) {
+            System.out.println("currentCrossWinnerSymbol");
             winnerUserSymbol = currentCrossWinnerSymbol;
             return;
         }
@@ -123,8 +154,10 @@ public class TicTacToe {
 
             for (int j = 0; j < COLUMN_LIMIT - 1; j++) {
                 if (!table.get(i).get(j).equals(table.get(i).get(j + 1))) {
-                    isAllRowSame = false;
-                    break;
+                    if(table.get(i).get(0) != EMPTY){
+                        isAllRowSame = false;
+                        break;
+                    }
                 }
             }
 
@@ -142,8 +175,10 @@ public class TicTacToe {
 
             for (int j = 0; j < ROW_LIMIT - 1; j++) {
                 if (!table.get(j).get(i).equals(table.get(j + 1).get(i))) {
-                    isAllColumnSame = false;
-                    break;
+                    if(table.get(0).get(i) != EMPTY){
+                        isAllColumnSame = false;
+                        break;
+                    }
                 }
             }
 
@@ -158,14 +193,24 @@ public class TicTacToe {
         if ((table.get(0).get(0).equals(table.get(1).get(1)) && table.get(0).get(0).equals(table.get(2).get(2))) ||
                 (table.get(0).get(2).equals(table.get(1).get(1)) && table.get(0).get(2).equals(table.get(2).get(0)))) {
 
-            return table.get(1).get(1);
+            if(table.get(1).get(1) != EMPTY){
+                return table.get(1).get(1);
+            }
         }
 
         return EMPTY;
     }
 
     public String getWinnerName() {
+        if(winnerUserSymbol.equals(USER_1))
+            return USER_1_NAME;
+        if(winnerUserSymbol.equals(USER_2))
+            return USER_2_NAME;
 
-        return EMPTY;
+        return DRAW;
+    }
+
+    public void restartGame(){
+        createTable();
     }
 }

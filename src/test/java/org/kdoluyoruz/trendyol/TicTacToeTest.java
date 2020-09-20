@@ -221,4 +221,61 @@ public class TicTacToeTest {
         assertThat(result).isEqualTo("User1");
     }
 
+    @Test
+    public void getWinnerName_WhenGameOverIfWinnerDoesNotExists_ReturnNoWinner() {
+
+        // Arrange
+
+        // Act
+        /*
+        0 X 0
+        X 0 0
+        X 0 X   */
+
+        sut.playUser1(0, 0);
+        sut.playUser2(0, 1);
+        sut.playUser1(0, 2);
+
+
+        sut.playUser2(1, 0);
+        sut.playUser1(1, 1);
+        sut.playUser2(2, 0);
+
+
+        sut.playUser1(1, 2);
+        sut.playUser2(2, 2);
+        sut.playUser1(2, 1);
+
+
+
+        String result = sut.getWinnerName();
+
+        // Assert
+        assertThat(result).isEqualTo("No Winner");
+    }
+
+    @Test
+    public void getWinnerName_WhenGameDoesNotOver_ThrowIllegalStateException() {
+
+        // Arrange
+
+        // Act
+        sut.playUser1(0, 0);
+        sut.playUser2(0, 1);
+        sut.playUser1(0, 2);
+
+
+        sut.playUser2(1, 0);
+        sut.playUser1(1, 1);
+        sut.playUser2(2, 0);
+
+        Throwable throwable = catchThrowable(() -> sut.getWinnerName());
+
+        //Assert
+        assertThat(throwable).isInstanceOf(IllegalStateException.class).hasMessage("Game Does Not Over Yet!!");
+    }
+
+
+
+
 }
