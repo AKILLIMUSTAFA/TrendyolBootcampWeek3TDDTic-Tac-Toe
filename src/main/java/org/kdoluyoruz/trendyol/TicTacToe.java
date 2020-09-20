@@ -37,10 +37,6 @@ public class TicTacToe {
         return true;
     }
 
-    public List<List<String>> getTable() {
-        return table;
-    }
-
     public boolean playUser1(int row, int column) {
 
         if (!isUser1Turn())
@@ -164,6 +160,11 @@ public class TicTacToe {
 
             return table.get(1).get(1);
         }
+
+        return EMPTY;
+    }
+
+    public String getWinnerName() {
 
         return EMPTY;
     }

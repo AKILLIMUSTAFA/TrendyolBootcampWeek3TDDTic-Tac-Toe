@@ -16,6 +16,7 @@ public class TicTacToeTest {
     @BeforeEach
     public void setup() {
         sut = new TicTacToe();
+        sut.createTable();
     }
 
     @AfterEach
@@ -28,7 +29,6 @@ public class TicTacToeTest {
         //Arrange
 
         //Act
-        sut.createTable();
 
         //Assert
         assertTrue(sut.isTableEmpty());
@@ -41,7 +41,6 @@ public class TicTacToeTest {
         int column = 0;
 
         //Act
-        sut.createTable();
         boolean result = sut.playUser1(row, column);
 
         //Assert
@@ -55,7 +54,6 @@ public class TicTacToeTest {
         int column = 1;
 
         //Act
-        sut.createTable();
         Throwable throwable = catchThrowable(() -> sut.playUser1(row, column));
 
         //Assert
@@ -69,7 +67,6 @@ public class TicTacToeTest {
         int column = 1;
 
         //Act
-        sut.createTable();
         Throwable throwable = catchThrowable(() -> sut.playUser1(row, column));
 
         //Assert
@@ -83,7 +80,6 @@ public class TicTacToeTest {
         int column = 5;
 
         //Act
-        sut.createTable();
         Throwable throwable = catchThrowable(() -> sut.playUser1(row, column));
 
         //Assert
@@ -97,7 +93,6 @@ public class TicTacToeTest {
         int column = -5;
 
         //Act
-        sut.createTable();
         Throwable throwable = catchThrowable(() -> sut.playUser1(row, column));
 
         //Assert
@@ -111,7 +106,6 @@ public class TicTacToeTest {
         int column = 0;
 
         //Act
-        sut.createTable();
         sut.playUser1(row, column);
         Throwable throwable = catchThrowable(() -> sut.playUser2(row, column));
 
@@ -128,7 +122,6 @@ public class TicTacToeTest {
         int move2_column = 0;
 
         //Act
-        sut.createTable();
         sut.playUser1(move1_row, move1_column);
         Throwable throwable = catchThrowable(() -> sut.playUser1(move2_row, move2_column));
 
@@ -145,7 +138,6 @@ public class TicTacToeTest {
         int move2_column = 0;
 
         //Act
-        sut.createTable();
         sut.playUser1(2, 2);
         sut.playUser2(move1_row, move1_column);
         Throwable throwable = catchThrowable(() -> sut.playUser2(move2_row, move2_column));
@@ -160,7 +152,6 @@ public class TicTacToeTest {
         // Arrange
 
         // Act
-        sut.createTable();
         sut.playUser1(0, 0);
         sut.playUser2(1, 0);
         sut.playUser1(0, 1);
@@ -180,7 +171,6 @@ public class TicTacToeTest {
         // Arrange
 
         // Act
-        sut.createTable();
         sut.playUser1(0, 0);
         sut.playUser2(0, 1);
         sut.playUser1(1, 0);
@@ -200,7 +190,6 @@ public class TicTacToeTest {
         // Arrange
 
         // Act
-        sut.createTable();
         sut.playUser1(0, 2);
         sut.playUser2(0, 1);
         sut.playUser1(1, 1);
@@ -212,6 +201,24 @@ public class TicTacToeTest {
         // Assert
         assertFalse(result1);
         assertTrue(result2);
+    }
+
+    @Test
+    public void getWinnerName_WhenGameOverIfWinnerExists_ReturnWinnerName() {
+
+        // Arrange
+
+        // Act
+        sut.playUser1(0, 2);
+        sut.playUser2(0, 1);
+        sut.playUser1(1, 1);
+        sut.playUser2(1, 2);
+        sut.playUser1(2, 0);
+
+        String result = sut.getWinnerName();
+
+        // Assert
+        assertThat(result).isEqualTo("User1");
     }
 
 }
