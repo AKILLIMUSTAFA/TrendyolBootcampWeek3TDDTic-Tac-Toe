@@ -1,9 +1,11 @@
 package org.kdoluyoruz.trendyol;
 
+import org.assertj.core.api.Java6Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -44,6 +46,20 @@ public class TicTacToeTest {
 
         //Assert
         assertTrue(result);
+    }
+
+    @Test
+    public void playUser1_WhenRowLimitIsExceeded_ShouldThrowIllegalArgumentException() {
+        //Arrange
+        int row = 4;
+        int column = 1;
+
+        //Act
+        sut.createTable();
+        Throwable throwable = Java6Assertions.catchThrowable(() -> sut.playUser1(row,column));
+
+        //Assert
+        assertThat(throwable).isInstanceOf(IllegalArgumentException.class).hasMessage("Row can not bigger than 3");
     }
 
 }
