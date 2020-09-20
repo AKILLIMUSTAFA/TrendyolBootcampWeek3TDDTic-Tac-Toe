@@ -93,7 +93,7 @@ public class TicTacToe {
 
     public boolean isGameOver() {
 
-        if(winnerUserSymbol == EMPTY)
+        if(winnerUserSymbol.equals(EMPTY))
             return false;
 
         return true;
@@ -102,28 +102,39 @@ public class TicTacToe {
     private void checkGameOver(){
 
         String currentRowWinnerSymbol = getRowWinnerSymbol();
-        if(currentRowWinnerSymbol != EMPTY) {
+        if(!currentRowWinnerSymbol.equals(EMPTY)) {
             winnerUserSymbol = currentRowWinnerSymbol;
             return;
         }
 
         String currentColumnWinnerSymbol = getColumnWinnerSymbol();
-        if(currentColumnWinnerSymbol != EMPTY) {
+        if(!currentColumnWinnerSymbol.equals(EMPTY)) {
             winnerUserSymbol = currentColumnWinnerSymbol;
             return;
         }
 
         String currentCrossWinnerSymbol = getCrossWinnerSymbol();
-        if(currentCrossWinnerSymbol != EMPTY) {
+        if(!currentCrossWinnerSymbol.equals(EMPTY)) {
             winnerUserSymbol = currentCrossWinnerSymbol;
             return;
         }
     }
 
     private String getRowWinnerSymbol() {
+        for (int i = 0; i < ROW_LIMIT ; i++) {
 
+            boolean isAllRowSame = true;
 
+            for (int j = 0; j < COLUMN_LIMIT - 1; j++) {
+                if(!table.get(i).get(j).equals(table.get(i).get(j+1))){
+                    isAllRowSame = false;
+                    break;
+                }
+            }
 
+            if(isAllRowSame)
+                return table.get(i).get(0);
+        }
         return EMPTY;
     }
 

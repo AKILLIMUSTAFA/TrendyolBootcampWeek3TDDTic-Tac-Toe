@@ -155,7 +155,7 @@ public class TicTacToeTest {
     }
 
     @Test
-    public void isGameOver_WhenUser1HasSideBySideOrCrossedSymbols_ReturnTrue() {
+    public void isGameOver_WhenUser1HasSideBySideSymbols_ReturnTrue() {
 
         // Arrange
 
@@ -167,6 +167,26 @@ public class TicTacToeTest {
         sut.playUser2(2, 0);
         boolean result1 = sut.isGameOver();
         sut.playUser1(0, 2);
+        boolean result2 = sut.isGameOver();
+
+        // Assert
+        assertFalse(result1);
+        assertTrue(result2);
+    }
+
+    @Test
+    public void isGameOver_WhenUser1HasOneUnderTheOtherSymbols_ReturnTrue() {
+
+        // Arrange
+
+        // Act
+        sut.createTable();
+        sut.playUser1(0, 0);
+        sut.playUser2(0, 1);
+        sut.playUser1(1, 0);
+        sut.playUser2(0, 2);
+        boolean result1 = sut.isGameOver();
+        sut.playUser1(2, 0);
         boolean result2 = sut.isGameOver();
 
         // Assert
