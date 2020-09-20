@@ -11,10 +11,12 @@ public class TicTacToe {
     final int COLUMN_LIMIT = 3;
     List<List<String>> table = new ArrayList<>();
     String userTurn;
+    String winnerUserSymbol;
 
     public void createTable() {
 
         userTurn = USER_1;
+        winnerUserSymbol = EMPTY;
 
         for (int i = 0; i < ROW_LIMIT; i++) {
             table.add(new ArrayList<>());
@@ -71,6 +73,7 @@ public class TicTacToe {
         if (table.get(row).get(column).equals(EMPTY)) {
             table.get(row).set(column, userSymbol);
             changeUserTurn();
+            checkGameOver();
             return true;
         }
 
@@ -90,6 +93,53 @@ public class TicTacToe {
 
     public boolean isGameOver() {
 
-        return false;
+        if(winnerUserSymbol == EMPTY)
+            return false;
+
+        return true;
     }
+
+    private void checkGameOver(){
+
+        String currentRowWinnerSymbol = getRowWinnerSymbol();
+        if(currentRowWinnerSymbol != EMPTY) {
+            winnerUserSymbol = currentRowWinnerSymbol;
+            return;
+        }
+
+        String currentColumnWinnerSymbol = getColumnWinnerSymbol();
+        if(currentColumnWinnerSymbol != EMPTY) {
+            winnerUserSymbol = currentColumnWinnerSymbol;
+            return;
+        }
+
+        String currentCrossWinnerSymbol = getCrossWinnerSymbol();
+        if(currentCrossWinnerSymbol != EMPTY) {
+            winnerUserSymbol = currentCrossWinnerSymbol;
+            return;
+        }
+    }
+
+    private String getRowWinnerSymbol() {
+
+
+
+        return EMPTY;
+    }
+
+    private String getColumnWinnerSymbol() {
+
+
+
+        return EMPTY;
+    }
+
+    private String getCrossWinnerSymbol() {
+
+        
+
+        return EMPTY;
+    }
+
+
 }
