@@ -93,46 +93,46 @@ public class TicTacToe {
 
     public boolean isGameOver() {
 
-        if(winnerUserSymbol.equals(EMPTY))
+        if (winnerUserSymbol.equals(EMPTY))
             return false;
 
         return true;
     }
 
-    private void checkGameOver(){
+    private void checkGameOver() {
 
         String currentRowWinnerSymbol = getRowWinnerSymbol();
-        if(!currentRowWinnerSymbol.equals(EMPTY)) {
+        if (!currentRowWinnerSymbol.equals(EMPTY)) {
             winnerUserSymbol = currentRowWinnerSymbol;
             return;
         }
 
         String currentColumnWinnerSymbol = getColumnWinnerSymbol();
-        if(!currentColumnWinnerSymbol.equals(EMPTY)) {
+        if (!currentColumnWinnerSymbol.equals(EMPTY)) {
             winnerUserSymbol = currentColumnWinnerSymbol;
             return;
         }
 
         String currentCrossWinnerSymbol = getCrossWinnerSymbol();
-        if(!currentCrossWinnerSymbol.equals(EMPTY)) {
+        if (!currentCrossWinnerSymbol.equals(EMPTY)) {
             winnerUserSymbol = currentCrossWinnerSymbol;
             return;
         }
     }
 
     private String getRowWinnerSymbol() {
-        for (int i = 0; i < ROW_LIMIT ; i++) {
+        for (int i = 0; i < ROW_LIMIT; i++) {
 
             boolean isAllRowSame = true;
 
             for (int j = 0; j < COLUMN_LIMIT - 1; j++) {
-                if(!table.get(i).get(j).equals(table.get(i).get(j+1))){
+                if (!table.get(i).get(j).equals(table.get(i).get(j + 1))) {
                     isAllRowSame = false;
                     break;
                 }
             }
 
-            if(isAllRowSame)
+            if (isAllRowSame)
                 return table.get(i).get(0);
         }
         return EMPTY;
@@ -140,17 +140,31 @@ public class TicTacToe {
 
     private String getColumnWinnerSymbol() {
 
+        for (int i = 0; i < COLUMN_LIMIT; i++) {
 
+            boolean isAllColumnSame = true;
 
+            for (int j = 0; j < ROW_LIMIT - 1; j++) {
+                if (!table.get(j).get(i).equals(table.get(j + 1).get(i))) {
+                    isAllColumnSame = false;
+                    break;
+                }
+            }
+
+            if (isAllColumnSame)
+                return table.get(0).get(i);
+        }
         return EMPTY;
     }
 
     private String getCrossWinnerSymbol() {
 
-        
+        if ((table.get(0).get(0).equals(table.get(1).get(1)) && table.get(0).get(0).equals(table.get(2).get(2))) ||
+                (table.get(0).get(2).equals(table.get(1).get(1)) && table.get(0).get(2).equals(table.get(2).get(0)))) {
+
+            return table.get(1).get(1);
+        }
 
         return EMPTY;
     }
-
-
 }

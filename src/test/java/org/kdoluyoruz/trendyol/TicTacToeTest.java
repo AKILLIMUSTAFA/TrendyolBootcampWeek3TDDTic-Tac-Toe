@@ -194,4 +194,24 @@ public class TicTacToeTest {
         assertTrue(result2);
     }
 
+    @Test
+    public void isGameOver_WhenUser1HasCrossedSymbols_ReturnTrue() {
+
+        // Arrange
+
+        // Act
+        sut.createTable();
+        sut.playUser1(0, 2);
+        sut.playUser2(0, 1);
+        sut.playUser1(1, 1);
+        sut.playUser2(1, 2);
+        boolean result1 = sut.isGameOver();
+        sut.playUser1(2, 0);
+        boolean result2 = sut.isGameOver();
+
+        // Assert
+        assertFalse(result1);
+        assertTrue(result2);
+    }
+
 }
