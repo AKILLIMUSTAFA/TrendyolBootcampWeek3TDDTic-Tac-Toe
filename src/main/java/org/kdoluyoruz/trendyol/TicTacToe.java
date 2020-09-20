@@ -10,8 +10,11 @@ public class TicTacToe {
     final int ROW_LIMIT = 3;
     final int COLUMN_LIMIT = 3;
     List<List<String>> table = new ArrayList<>();
+    String userTurn;
 
     public void createTable() {
+
+        userTurn = USER_1;
 
         for (int i = 0; i < ROW_LIMIT; i++) {
             table.add(new ArrayList<>());
@@ -20,7 +23,6 @@ public class TicTacToe {
             }
         }
     }
-
 
     public boolean isTableEmpty() {
         for (List<String> row : table) {
@@ -39,6 +41,21 @@ public class TicTacToe {
 
     public boolean playUser1(int row, int column) {
 
+        if (!isUser1Turn())
+            throw new IllegalStateException("Not User 1's turn!!");
+
+        return play(USER_1, row, column);
+    }
+
+    public boolean playUser2(int row, int column) {
+
+        if (isUser1Turn())
+            throw new IllegalStateException("Not User 2's turn!!");
+
+        return play(USER_2, row, column);
+    }
+
+    private boolean play(String userSymbol, int row, int column) {
         if (row > ROW_LIMIT)
             throw new IllegalArgumentException("Row can not bigger than 2");
 
@@ -51,12 +68,28 @@ public class TicTacToe {
         if (column < 0)
             throw new IllegalArgumentException("Column can not lower than 0");
 
-
         if (table.get(row).get(column).equals(EMPTY)) {
-            table.get(row).set(column, USER_1);
+            table.get(row).set(column, userSymbol);
+            changeUserTurn();
             return true;
         }
 
         throw new IllegalStateException("Cell is not empty!!");
+    }
+
+    private boolean isUser1Turn() {
+        return userTurn.equals(USER_1);
+    }
+
+    private void changeUserTurn() {
+        if (userTurn.equals(USER_1))
+            userTurn = USER_2;
+        else
+            userTurn = USER_1;
+    }
+
+    public boolean isGameOver() {
+
+        return false;
     }
 }
