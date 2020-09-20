@@ -3,21 +3,32 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="571f108e-0ff2-4838-996a-c022f6a5f794" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/kdoluyoruz/trendyol/TicTacToe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/kdoluyoruz/trendyol/TicTacToeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrendyolBootcampW3TDDTicTacToe.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/kdoluyoruz/trendyol/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/kdoluyoruz/trendyol/TicTacToe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/kdoluyoruz/trendyol/TicTacToeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/kdoluyoruz/trendyol/TicTacToeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +48,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Users\mustafa\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\202.6948.69\plugins\maven\lib\maven3" />
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.1\plugins\maven\lib\maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -54,8 +65,18 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\CEVIK\IdeaProjects\TrendyolBootcamp\TrendyolBootcampWeek3TDDTic-Tac-Toe\src\test\java\org\kdoluyoruz\trendyol" />
+      <recent name="C:\Users\CEVIK\IdeaProjects\TrendyolBootcamp\TrendyolBootcampWeek3TDDTic-Tac-Toe\src\main\java\org\kdoluyoruz\trendyol" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TicTacToeTest.playUser1_WhenCellIsEmpty_ShouldReturnTrue">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -67,6 +88,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TicTacToeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TrendyolBootcampWeek3TDDTic-Tac-Toe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.kdoluyoruz.trendyol.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.kdoluyoruz.trendyol" />
+      <option name="MAIN_CLASS_NAME" value="org.kdoluyoruz.trendyol.TicTacToeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicTacToeTest.createTable_WhenGameStart_ShouldReturnEmptyTable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TrendyolBootcampWeek3TDDTic-Tac-Toe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.kdoluyoruz.trendyol.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.kdoluyoruz.trendyol" />
+      <option name="MAIN_CLASS_NAME" value="org.kdoluyoruz.trendyol.TicTacToeTest" />
+      <option name="METHOD_NAME" value="createTable_WhenGameStart_ShouldReturnEmptyTable" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicTacToeTest.playUser1_WhenCellIsEmpty_ShouldReturnTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TrendyolBootcampWeek3TDDTic-Tac-Toe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.kdoluyoruz.trendyol.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.kdoluyoruz.trendyol" />
+      <option name="MAIN_CLASS_NAME" value="org.kdoluyoruz.trendyol.TicTacToeTest" />
+      <option name="METHOD_NAME" value="playUser1_WhenCellIsEmpty_ShouldReturnTrue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TicTacToeTest.playUser1_WhenCellIsEmpty_ShouldReturnTrue" />
+        <item itemvalue="JUnit.TicTacToeTest" />
+        <item itemvalue="JUnit.TicTacToeTest.createTable_WhenGameStart_ShouldReturnEmptyTable" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -78,33 +153,59 @@
       <updated>1600601057468</updated>
       <workItem from="1600601058615" duration="463000" />
       <workItem from="1600603490003" duration="829000" />
+      <workItem from="1600605715094" duration="382000" />
+      <workItem from="1600606113253" duration="357000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="1085" y="400" key="#com.intellij.ide.util.MemberChooser" timestamp="1600604078551">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1085" y="400" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1600604078551" />
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1600601521930">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1323" height="216" key="GridCell.Tab.0.bottom" timestamp="1600606144831">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state width="1323" height="216" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1600606144831" />
     <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1600601521930" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1600601521930">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1323" height="216" key="GridCell.Tab.0.center" timestamp="1600606144830">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state width="1323" height="216" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1600606144830" />
     <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1600601521930" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1600601521930">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1323" height="216" key="GridCell.Tab.0.left" timestamp="1600606144830">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state width="1323" height="216" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1600606144830" />
     <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1600601521930" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1600601521930">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1323" height="216" key="GridCell.Tab.0.right" timestamp="1600606144831">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state width="1323" height="216" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1600606144831" />
     <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1600601521930" />
+    <state x="242" y="0" key="RollbackChangesDialog" timestamp="1600606025765">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="242" y="0" key="RollbackChangesDialog/0.0.1366.738@0.0.1366.738" timestamp="1600606025765" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1600605843395">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1600605843395" />
     <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1600603759905">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

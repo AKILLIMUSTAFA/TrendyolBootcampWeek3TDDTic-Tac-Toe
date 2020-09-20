@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TicTacToeTest {
 
@@ -28,7 +29,21 @@ public class TicTacToeTest {
         sut.createTable();
 
         //Assert
-        assertEquals(true, sut.isTableEmpty());
+        assertTrue(sut.isTableEmpty());
+    }
+
+    @Test
+    public void playUser1_WhenCellIsEmpty_ShouldReturnTrue() {
+        //Arrange
+        int row = 0;
+        int column = 0;
+
+        //Act
+        sut.createTable();
+        boolean result = sut.playUser1(row,column);
+
+        //Assert
+        assertTrue(result);
     }
 
 }
