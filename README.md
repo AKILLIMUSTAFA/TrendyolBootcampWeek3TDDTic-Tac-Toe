@@ -19,9 +19,9 @@ Tic-tac-toe (American English), noughts and crosses (Commonwealth English), or X
 
 ## Team
 
-[![Mustafa AKILLI](https://s.gravatar.com/avatar/52168dc4df585e105d50b45f990e9e62?s=140)](https://github.com/AKILLIMUSTAFA) | [![Muhammed KANDUR](https://avatars2.githubusercontent.com/u/39580114?s=140&u=6945e6d1127c9cf9b7c00c47be90b8eef7cfb921&v=4)](https://github.com/semustafacevik)
+[![Mustafa AKILLI](https://s.gravatar.com/avatar/52168dc4df585e105d50b45f990e9e62?s=140)](https://github.com/AKILLIMUSTAFA) | [![Mustafa ÇEVİK](https://avatars2.githubusercontent.com/u/39580114?s=140&u=6945e6d1127c9cf9b7c00c47be90b8eef7cfb921&v=4)](https://github.com/semustafacevik)
 ---|---
-[Mustafa AKILLI](https://github.com/AKILLIMUSTAFA) | [Muhammed KANDUR](https://github.com/semustafacevik)
+[Mustafa AKILLI](https://github.com/AKILLIMUSTAFA) | [Mustafa ÇEVİK](https://github.com/semustafacevik)
 
 
 
