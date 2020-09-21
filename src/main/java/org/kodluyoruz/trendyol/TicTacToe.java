@@ -146,7 +146,7 @@ public class TicTacToe {
 
             for (int j = 0; j < COLUMN_LIMIT - 1; j++) {
                 if (!table.get(i).get(j).equals(table.get(i).get(j + 1))) {
-                    if (table.get(i).get(0).equals(EMPTY)) {
+                    if (!table.get(i).get(0).equals(EMPTY)) {
                         isAllRowSame = false;
                         break;
                     }
@@ -167,7 +167,7 @@ public class TicTacToe {
 
             for (int j = 0; j < ROW_LIMIT - 1; j++) {
                 if (!table.get(j).get(i).equals(table.get(j + 1).get(i))) {
-                    if (table.get(0).get(i).equals(EMPTY)) {
+                    if (!table.get(0).get(i).equals(EMPTY)) {
                         isAllColumnSame = false;
                         break;
                     }
@@ -185,7 +185,7 @@ public class TicTacToe {
         if ((table.get(0).get(0).equals(table.get(1).get(1)) && table.get(0).get(0).equals(table.get(2).get(2))) ||
                 (table.get(0).get(2).equals(table.get(1).get(1)) && table.get(0).get(2).equals(table.get(2).get(0)))) {
 
-            if (table.get(1).get(1).equals(EMPTY)) {
+            if (!table.get(1).get(1).equals(EMPTY)) {
                 return table.get(1).get(1);
             }
         }
