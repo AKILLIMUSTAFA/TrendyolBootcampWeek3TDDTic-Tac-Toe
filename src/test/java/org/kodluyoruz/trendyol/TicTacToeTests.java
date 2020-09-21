@@ -1,4 +1,4 @@
-package org.kdoluyoruz.trendyol;
+package org.kodluyoruz.trendyol;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -9,7 +9,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class TicTacToeTest {
+public class TicTacToeTests {
 
     TicTacToe sut;
 

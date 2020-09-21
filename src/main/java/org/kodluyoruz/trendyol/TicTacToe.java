@@ -1,4 +1,4 @@
-package org.kdoluyoruz.trendyol;
+package org.kodluyoruz.trendyol;
 
 import java.util.ArrayList;
 import java.util.List;
